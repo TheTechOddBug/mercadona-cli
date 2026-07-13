@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 'use strict';
 
-// Thin launcher: ensure the platform binary is present (downloading on first run if
-// postinstall was skipped), then exec it with the caller's args, forwarding the exit code.
+// Thin launcher: ensure the platform binary is present (downloading it on first run,
+// cached thereafter), then exec it with the caller's args, forwarding the exit code.
 
 const { spawnSync } = require('child_process');
 const { ensureBinary } = require('../lib/download.js');

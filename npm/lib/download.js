@@ -1,8 +1,9 @@
 'use strict';
 
 // Resolves and downloads the prebuilt mercadona binary that matches this package
-// version + the host platform, from the GitHub Release. Shared by scripts/postinstall.js
-// (eager, at `npm install`) and bin/run.js (lazy fallback, e.g. under --ignore-scripts).
+// version + the host platform, from the GitHub Release. Used by bin/run.js, which
+// fetches the binary lazily on first run and caches it in bin/ (no install-time
+// scripts, so it works cleanly under npm's/pnpm's default --ignore-scripts).
 
 const fs = require('fs');
 const path = require('path');

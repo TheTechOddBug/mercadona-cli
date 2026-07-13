@@ -5,12 +5,8 @@
   "bin": {
     "mercadona": "bin/run.js"
   },
-  "scripts": {
-    "postinstall": "node scripts/postinstall.js"
-  },
   "files": [
     "bin/run.js",
-    "scripts/postinstall.js",
     "lib/download.js",
     "README.md"
   ],
